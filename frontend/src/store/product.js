@@ -14,6 +14,12 @@ export const useProductStore = create((set) => ({
 			},
 			body: JSON.stringify(newProduct),
 		});
+
+        if (!res.ok) {
+            console.error("Server Error:", res.statusText);
+            return { success: false, message: "Server error, could not create product." };
+          }
+
 		const data = await res.json();
 		set((state) => ({ products: [...state.products, data.data] }));
 		return { success: true, message: "Product created successfully" };

@@ -14,7 +14,22 @@ const CreatePage = () => {
 
 	const handleAddProduct = async () => {
 		const { success, message } = await createProduct(newProduct);
-		console.log(success, message);
+		if (!success) {
+			toast({
+				title: "Error",
+				description: message,
+				status: "error",
+				isClosable: true,
+			});
+		} else {
+			toast({
+				title: "Success",
+				description: message,
+				status: "success",
+				isClosable: true,
+			});
+		}
+		setNewProduct({ name: "", price: "", image: "" });
 	};
 
 	return (
