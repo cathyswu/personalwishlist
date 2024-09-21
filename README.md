@@ -1,3 +1,2 @@
-# Welcome to my Personal Wishlist!
-## There are some things that I've been wanting to buy...
-Note: The website might take a little to load; please be patient!
+# Personal Wishlist: a website to add items to your wishlist. Feel free to interact with the website!
+Note: The website might take a bit to load, thank you for your patience :)
